@@ -55,7 +55,7 @@ public class LoginFilter extends UsernamePasswordAuthenticationFilter {
         System.out.println("--- username : " + username);
         System.out.println("--- role : " + role);
 
-        String token = jwtUtil.createJwt(username, role, 60*60*1000L);
+        String token = jwtUtil.createJwt(username, role, 20*1000L); // 10초 후 만료
         System.out.println("token : " + token);
 
         // RFC 7235 표준방식

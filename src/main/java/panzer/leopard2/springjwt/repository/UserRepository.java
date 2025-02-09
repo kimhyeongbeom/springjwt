@@ -6,4 +6,6 @@ import panzer.leopard2.springjwt.entity.UserEntity;
 public interface UserRepository extends JpaRepository<UserEntity, Integer> {
 
     Boolean existsByUsername(String username);
+
+    UserEntity findByUsername(String username);
 }
